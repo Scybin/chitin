@@ -7,9 +7,9 @@
 - [⚠️ Disclaimer](#disclaimer)
 - [⌨️ Welcome](#welcome)
 - [⚙️ Features](#features)
+- [💾 Firmware](#firmware)
 - [📦 Parts List](#parts-list)
 - [🛠️ Build Images](#build-images)
-- [💾 Firmware](#firmware)
 - [📄 License](#license)
 
 <a name="disclaimer"></a>
@@ -31,22 +31,33 @@ The trackball used in this build is a Pimoroni PIM447 breakout with a Qw/ST conn
 <a name="features"></a>
 ## ⚙️ Features
 
-- Ergonomic ortholinear layout
+- Ergonomic split layout
 - ZMK firmware support
 - USB-C connectivity & battery charging
 - Bluetooth compatible
 - Customizable keymaps, layers, and macros
 - Trackball which can be programmed as a pointing device
-- Layout is declared using Ergogen
+- Layout and case design is declared using Ergogen
 - KiCad traces auto-routed using Freerouting
 - Open source
+- Hot-swap and semi-modular
+
+<a name="firmware"></a>
+## 💾 Firmware
+
+To get started, I recommend forking my personal repository for chitin here: [zmk-config-chitin](https://github.com/Scybin/zmk-config-chitin). 
+
+- To flash the keyboard, follow the flashing instructions in the [ZMK docs](https://zmk.dev/docs).
+- Making modifications to the keyboard can be done within the config folder. 
+- My build sets the central device to the right half of the keyboard, and the peripheral to the left half. Making changes to which half the trackball resides on, or excluding the trackball from the build requires many changes to the code in the chitin repository and source module. 
+- The chitin ZMK repository also uses my Pimoroni trackball driver module (derived from mwandzik's driver) here: [zmk-driver-pim447](https://github.com/Scybin/zmk-driver-pim447).
 
 <a name="parts-list"></a>
 ## 📦 Parts List
 
 *I am not sponsored or affiliated with the vendors linked below. This is where I prefer to purchase my products.*
 
-| Part                      | Quantity | Description                                     | Purchase Link                                                                                                          | Datasheet                                                                                                                           |
+| Part                      | Quantity | Description                                     | Purchase Link                                                                                                          | Datasheet                                                                                                                                 |
 |---------------------------|----------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------------------------------------------------------------|
 | Microcontroller           |    2     | nice!nano v2.0                                  | [Nice Keyboarrds nice!nano v2.0](https://typeractive.xyz/products/no-solder-spring-headers?variant=47196312502503)     | [Nordic nRF52840](https://nicekeyboards.com/nice-nano)                                                                                    | 
 | Pin Headers               |    4     | Controller socketing system (4mm)               | [MAC8 spring-loaded pin headers](https://www.littlekeyboards.com/products/spring-header-12-pin?variant=40197938675779) | [MAC8 spring-loaded pin headers specifications](https://www.mac8sdk.co.jp/uploads/entry_meta/file_value/1117/mac8_2018a_jp-xb2.pdf)       |
@@ -59,7 +70,7 @@ The trackball used in this build is a Pimoroni PIM447 breakout with a Qw/ST conn
 | MX Switch                 |    57    | JWICK Linear Switches                           | [JWK JWICK Linear Switches](https://typeractive.xyz/products/jwk-jwick-linear-switches)                                | [MX Series Keyswitch](https://cdn.sparkfun.com/datasheets/Components/Switches/MX%20Series.pdf)                                            |
 | MX Keycap                 |    57    | 55 x 1u, 2 x 1.5u                               | [DSA Keycaps](https://typeractive.xyz/products/dsa-keycaps)                                                            | [DSA Keycap Project](https://drive.google.com/drive/folders/0B0LNjZf_tzjWZGhwZ0VKUm9PQVE?resourcekey=0-rYUAMYD1-22Btlgdmpb0IQ)            |
 | M2x15 Standoff            |    18    | Standoffs for plate                             | [Newark M2x15 Standoff](https://www.newark.com/wurth-elektronik/970150244/standoff-brass-hex-f-f-m2-15mm/dp/46AJ4338)  | [Farnell Datasheet](https://www.farnell.com/cad/3209262.pdf)                                                                              |
-| M2x5e Screw                |    8     | Screws to connect bottom case to top case       | [CO-RODE Screw Kit](https://www.amazon.com/gp/product/B01FTI8TM8/)                                                     |                                                                                                                                           |
+| M2x5e Screw               |    8     | Screws to connect bottom case to top case       | [CO-RODE Screw Kit](https://www.amazon.com/gp/product/B01FTI8TM8/)                                                     |                                                                                                                                           |
 | M2x6 Screw                |    18    | Screws for bottom case and top plate            | [CO-RODE Screw Kit](https://www.amazon.com/gp/product/B01FTI8TM8/)                                                     |                                                                                                                                           |
 | M2.5x8 Screw              |    4     | Screws to hold trackball in top case            | [CO-RODE Screw Kit](https://www.amazon.com/gp/product/B01FTI8TM8/)                                                     |                                                                                                                                           |
 | M2x3 Insert Nut           |    8     | Inserts for top cases                           | [uxcell Knurled Insert Nuts](https://www.amazon.com/dp/B07LBQFNQD?th=1)                                                |                                                                                                                                           |
@@ -87,16 +98,6 @@ The trackball used in this build is a Pimoroni PIM447 breakout with a Qw/ST conn
 ![chitin_bottom_assembled](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chiting_bottom_assembled.jpg)
 
 ![chitin_side](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chitin_side.jpg)
-
-<a name="firmware"></a>
-## 💾 Firmware
-
-To get started, I recommend forking my personal repository for chitin here: [zmk-config-chitin](https://github.com/Scybin/zmk-config-chitin). 
-
-- To flash the keyboard, follow the flashing instructions in the [ZMK docs](https://zmk.dev/docs).
-- Making modifications to the keyboard can be done within the config folder. 
-- My build sets the central device to the right half of the keyboard, and the peripheral to the left half. Making changes to which half the trackball resides on, or excluding the trackball from the build requires many changes to the code in the chitin repository and source module. 
-- The chitin ZMK repository also uses my Pimoroni trackball driver module (derived from mwandzik's driver) here: [zmk-driver-pim447](https://github.com/Scybin/zmk-driver-pim447).
 
 <a name="license"></a>
 ## 📄 License
