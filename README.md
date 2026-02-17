@@ -9,7 +9,7 @@
 - [⚙️ Features](#features)
 - [📊 Project Status](#project-status)
 - [📦 Parts List](#parts-list)
-- [🛠️ Build Guide](#build-guide)
+- [🛠️ Build Images](#build-images)
 - [💾 Firmware](#firmware)
 - [📄 License](#license)
 
@@ -23,7 +23,11 @@ The author(s) take no responsibility for any damage, issues, or legal trouble th
 <a name="welcome"></a>
 ## ⌨️ Welcome
 
-Chitin is a custom, open-source mechanical keyboard designed for ergonomic comfort, wireless functionality, and trackball. The design is built off my original keyboard design: scyboard, a minimal keyboard design.
+Chitin is a custom mechanical keyboard designed for ergonomic comfort, wireless functionality, and useful features. All hardware and software aspects of this project are open source and documented in this repository. Best of all, the build is completely hot-swappable, meaning assembly and disassembly can be done with ease. This includes the microcontroller, switches, lipo battery, and even the trackball. The chitin keyboard is based off my original keyboard design: [scyboard](https://github.com/Scybin/scyboard).
+
+The trackball used in this build is a Pimoroni PIM447 breakout with a Qw/ST connector. The cool part about the connector is that you can use the trackball without needing to solder the moutning holes to the microcontroller. Included on the chitin PCB is a footprint for a JST SH connector, which you can use to connect the trackball to the board.
+
+![chitin_top_open](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chitin_top_open.jpg)
 
 <a name="features"></a>
 ## ⚙️ Features
@@ -77,19 +81,28 @@ The prototype design is complete. Waiting for hardware to build keyboard.
 - MX Switch
 - 1u MX Keycap
 
-<a name="build-guide"></a>
-## 🛠️ Build Guide
+<a name="build-images"></a>
+## 🛠️ Build Images
 
-TODO
+![chitin_pcb](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chitin_pcb.jpg)
+
+![chitin_plates](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chitin_plates.jpg)
+
+![chitin_bottom_open](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chitin_bottom_open.jpg)
+
+![chitin_bottom_assembled](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chiting_bottom_assembled.jpg)
+
+![chitin_side](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chitin_side.jpg)
 
 <a name="firmware"></a>
 ## 💾 Firmware
 
-To get started, I recommend forking my personal repository for chitin here: [zmk-config-chitin](https://github.com/Scybin/zmk-config-chitin). Making modifications to the keyboard can be done within the config folder. To flash the keyboard, follow the flashing instructions in the [ZMK docs](https://zmk.dev/docs).
+To get started, I recommend forking my personal repository for chitin here: [zmk-config-chitin](https://github.com/Scybin/zmk-config-chitin). 
 
-My build sets the central device to the right half of the keyboard, and the peripheral to the left half. Making changes to which half the trackball resides on, or excluding the trackball from the build requires many changes to the code in the chitin repository and source module.
-
-The repository uses my chitin ZMK module here: [zmk-keyboard-chitin](https://github.com/Scybin/zmk-keyboard-chitin), and my Pimoroni trackball driver module (derived from mwandzik's driver) here: [zmk-driver-pim447](https://github.com/Scybin/zmk-driver-pim447).
+- To flash the keyboard, follow the flashing instructions in the [ZMK docs](https://zmk.dev/docs).
+- Making modifications to the keyboard can be done within the config folder. 
+- My build sets the central device to the right half of the keyboard, and the peripheral to the left half. Making changes to which half the trackball resides on, or excluding the trackball from the build requires many changes to the code in the chitin repository and source module. 
+- The chitin ZMK repository also uses my Pimoroni trackball driver module (derived from mwandzik's driver) here: [zmk-driver-pim447](https://github.com/Scybin/zmk-driver-pim447).
 
 <a name="license"></a>
 ## 📄 License
