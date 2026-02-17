@@ -7,7 +7,6 @@
 - [⚠️ Disclaimer](#disclaimer)
 - [⌨️ Welcome](#welcome)
 - [⚙️ Features](#features)
-- [📊 Project Status](#project-status)
 - [📦 Parts List](#parts-list)
 - [🛠️ Build Images](#build-images)
 - [💾 Firmware](#firmware)
@@ -41,11 +40,6 @@ The trackball used in this build is a Pimoroni PIM447 breakout with a Qw/ST conn
 - Layout is declared using Ergogen
 - KiCad traces auto-routed using Freerouting
 - Open source
-
-<a name="project-status"></a>
-## 📊 Project Status
-
-The prototype design is complete. Waiting for hardware to build keyboard.
 
 <a name="parts-list"></a>
 ## 📦 Parts List
