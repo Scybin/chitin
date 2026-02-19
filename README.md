@@ -24,7 +24,7 @@ The author(s) take no responsibility for any damage, issues, or legal trouble th
 
 Chitin is a custom mechanical keyboard designed for ergonomic comfort, wireless functionality, and useful features. All hardware and software aspects of this project are open source and documented in this repository. Best of all, the build is completely hot-swappable, meaning assembly and disassembly can be done with ease. This includes the microcontroller, switches, lipo battery, and even the trackball. The chitin keyboard is based off my original keyboard design: [scyboard](https://github.com/Scybin/scyboard).
 
-The trackball used in this build is a Pimoroni PIM447 breakout with a Qw/ST connector. The cool part about the connector is that you can use the trackball without needing to solder the moutning holes to the microcontroller. Included on the chitin PCB is a footprint for a JST SH connector, which you can use to connect the trackball to the board.
+The trackball used in this build is a Pimoroni PIM447 breakout with a Qw/ST connector. The connector is useful because you can use the trackball without needing to solder the mounting holes to the microcontroller. Included on the chitin PCB is a footprint for a JST SH connector, which you can use to connect the trackball to the board.
 
 ![chitin_top_open](https://github.com/Scybin/chitin/blob/3fa79513dd8dc1efe44d9337154b17f7f3150a1d/images/chitin_top_open.jpg)
 
